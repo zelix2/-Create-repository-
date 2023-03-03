@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  all: unset;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+
+body { 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.sec {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header, footer { 
+  padding: 10px 0;
+  background-color: rgb(170, 170, 238);
+}
+
+.logo {
+  width: 60px;
+}
+
+.navbar {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.navbar__list {
+  display: flex;
+}
+
+.navbar__item:hover {
+  color: rgb(233, 195, 228);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.image-list__item:hover {
+  color: rgb(229, 182, 182);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navbar__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.left-side {
+  max-width: 380px;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 600px;
+}
+
+.image-list__item a p {
+  max-width: 270px;
+}
+
+.call-button {
+  all: unset;
+  background-color: rgb(194, 130, 236);
+  padding: 10px 20px;
+  margin-right: 30px;
+  border-radius: 7px;
+  color: rgb(241, 227, 240);
+}
+
+.call-button:hover {
+  background-color: rgb(185, 130, 192);
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  max-width: 1024px;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.p-footer {
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.abz {
+  padding: 6px 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid rgba(128, 128, 128, 0.1);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  min-height: 40px;
+}
+
+.ticker span {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 100%;
+  animation: scroll 15s infinite linear;
+}
+
+@media screen and (max-width: 786px) {
+  .main {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .left-side {
+    max-width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar__item {
+    margin: 0 !important;
+  }
+
+  .navbar__list {
+    flex-wrap: wrap;
+    max-width: 250px;
+    justify-content: space-evenly;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .call-button {
+    padding: 5px 10px;
+  }
+
+  .image-list {
+    flex-direction: column;
+  }
+}
